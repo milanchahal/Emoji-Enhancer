@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Emoji Suggester</title>
+    <style>
+        body {
+            width: 350px;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            padding-right: 30px;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        h1 {
+            color: #128C7E;
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #message {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 120px;
+            font-size: 16px;
+            box-sizing: border-box;
+            line-height: 1.4;
+        }
+        #suggestBtn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        #suggestBtn:hover {
+            background-color: #128C7E;
+        }
+        #suggestions-container {
+            position: relative;
+            margin-top: 20px;
+        }
+        #suggestions {
+            padding: 12px;
+            background-color: white;
+            border-radius: 8px;
+            min-height: 60px;
+            word-wrap: break-word;
+            padding-right: 45px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        #copyBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        #copyBtn svg {
+            width: 24px;
+            height: 24px;
+            fill: #128C7E;
+        }
+        #copyBtn:hover svg {
+            fill: #25D366;
+        }
+        #watermark {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #128C7E;
+        }
+        #watermark a {
+            color: #128C7E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #watermark a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>WhatsApp Emoji Suggester</h1>
+    <textarea id="message" placeholder="Write your message here..."></textarea>
+    <button id="suggestBtn">Suggest Emojis</button>
+    <div id="suggestions-container">
+        <div id="suggestions"></div>
+        <button id="copyBtn" title="Copy to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+        </button>
+    </div>
+    <div id="watermark">
+        Developed with ❤️ by <a href="https://www.linkedin.com/in/tanishmoral/" target="_blank">Tanish Moral</a>
+    </div>
+    <script src="popup.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>
